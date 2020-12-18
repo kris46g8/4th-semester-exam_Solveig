@@ -1,0 +1,20 @@
+.viewer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.userInput {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+     width: 100vw;
+    height: 100vh;
+}
+
+.second {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FDE12D;
+}
