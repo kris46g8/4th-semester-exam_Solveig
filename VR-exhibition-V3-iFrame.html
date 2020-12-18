@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VR Exhibition by Sólveig Hansdóttir</title>
+    <meta name="description" content="VR Exhibition by Sólveig Hansdóttir">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+</head>
+
+
+<body>
+
+        <a-scene embedded>
+            <a-camera position="0 1.6 0">
+                <a-sound src="url(Wake.mp3)" autoplay="true" position="0 0 0" loop="true" volume="0.00"></a-sound>
+            </a-camera>
+
+
+            <a-assets>
+
+                <video id="Spiral-saga" autoplay muted playsinline loop="true" src="Spiral-saga.mp4"></video>
+
+                <video id="Diameterdress" autoplay muted playsinline loop="true" src="Diameterdress.mp4"></video>
+
+                <video id="Spiral-skirt-saga" autoplay muted playsinline loop="true" src="Spiral-skirt-saga.mp4"></video>
+
+                <video id="connection-lust" autoplay muted playsinline loop="true" src="connection-lust.mp4"></video>
+
+                <a-asset-item id="exhibition" src="final-scene-iteration-2.glb"></a-asset-item>
+
+
+            </a-assets>
+
+
+            <!--            General scene-->
+
+
+            <a-video src="#Spiral-saga" width="0.9" height="0.5063" position="-1.3 2.16 1.37" rotation="0 36 0"></a-video>
+
+            <a-video src="#Diameterdress" width="0.9" height="0.5063" position="-1.35 2.16 0.86" rotation="0 156 0"></a-video>
+
+            <a-video src="#Spiral-skirt-saga" width="0.9" height="0.5063" position="-1.75 2.16 1.165" rotation="0 277 0"></a-video>
+
+            <a-video src="#connection-lust" width="1.2" height="0.675" position="1.07 2.3 4.4" rotation="0 262 0"></a-video>
+
+
+            <a-entity environment="preset: dream; skyColor: #F2FAFF; skyType: color; lighting: distant; groundColor: #EFF8FD; fog: 0.9; playArea: 0.7; ground: flat; groundTexture: none; dressingAmount: 0"></a-entity>
+
+            <!--        <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .plane"></a-entity>-->
+
+            <a-gltf-model src="#exhibition" material="shader:flat" scale="1 1 1" position="-3.5 1 6.3" rotation="0 -43 0"></a-gltf-model>
+
+
+
+            <a-camera look-controls wasd-controls="acceleration: 50" position="2.5 2 1.1">
+
+                <a-cursor fuse="true" fuse-timeout="2000" raycaster="objects: .link">
+                </a-cursor>
+
+                <a-sound src="Sunny.mp3" autoplay="true" position="0 0 0" loop="true" volume="1"></a-sound>
+            </a-camera>
+
+        </a-scene>
+
+</body>
+
+
+
+
+</html>
